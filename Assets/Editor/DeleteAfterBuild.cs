@@ -19,7 +19,6 @@ public class DeleteAfterBuild
             File.Delete(Path.Combine(Application.dataPath, "StreamingAssets.meta"));
         }
         
-        // StreamingAssets folder will be removed from project in couple seconds. Don't worry if it still stays in your project after build.
-        // Sometimes your IDE dont let the delete folder. If you .gitignore StreamingAsset, you are fine.
+        AssetDatabase.Refresh();
     }
 }
